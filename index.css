@@ -15,7 +15,7 @@
   --vapour: #dcdcdc;
   --smoke: #969696;
   --ash: #505050;
-  --text: #141414;
+  --text: #3C3C3C;
   --link: #2878dc;
 }
 
@@ -24,6 +24,8 @@ body{
   background-color: var(--bg);
   color: var(--text);
   font-family: 'Inter', 'Pretendard';
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 del{
@@ -44,6 +46,11 @@ blockquote{
 
 table{
   border-collapse: collapse;
+  font-size: inherit;
+}
+
+table+table{
+  margin-top: 16px;
 }
 
 th, td{
