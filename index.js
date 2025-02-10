@@ -1,10 +1,10 @@
 const title = new URL(window.location.href).searchParams.get('title');
 let content = '';
 
-const contentBox = document.getElementByID('content');
+const contentBox = document.getElementById('content');
 
 async function getContent(){
-  const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/저언어.md`);
+  const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
   content = await marked.parse(response.text());
 }
 
