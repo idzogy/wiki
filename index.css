@@ -56,10 +56,18 @@ table+table{
 th, td{
   padding: 8px 16px;
   border: 1px solid var(--vapour);
-  font-weight: normal;
+}
+
+th{
+  background-color: var(--cloud);
+}
+
+th::selection{
+  background-color: var(--vapour);
 }
 
 #content{
   width: max(300px, 80%);
   margin: 0 auto;
+  margin-bottom: 50px;
 }
