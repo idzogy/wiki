@@ -6,12 +6,8 @@ const contentBox = document.getElementById('content');
 async function getContent(){
   const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
   content = await response.text();
-  content = marked.parse(content);
-}
-
-function setContent(){
+  content = `<h1>${title}</h1>` + marked.parse(content);
   contentBox.innerHTML = content;
 }
 
-getContent();
 setContent();
