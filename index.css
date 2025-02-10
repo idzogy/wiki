@@ -63,10 +63,6 @@ th{
   background-color: var(--light);
 }
 
-th::selection{
-  background-color: var(--vapour);
-}
-
 #content{
   width: max(300px, 80%);
   margin: 0 auto;
