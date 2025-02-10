@@ -1,0 +1,48 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
+::selection{
+  background-color: var(--cloud);
+}
+
+:root{
+  --bg: #ffffff;
+  --cloud: #e8e8e8;
+  --vapour: #dcdcdc;
+  --smoke: #969696;
+  --ash: #505050;
+  --text: #141414;
+}
+
+body{
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+del{
+  color: var(--smoke);
+}
+
+blockquote{
+  margin-left: 0;
+  padding: 4px 12px;
+  border-left: 4px solid var(--vapour);
+  color: var(--ash);
+}
+
+table{
+  border-collapse: collapse;
+}
+
+th, td{
+  padding: 8px 16px;
+  border: 1px solid var(--vapour);
+  font-weight: normal;
+}
+
+#content{
+  width: max(300px, 80%);
+  margin: 0 auto;
+}
