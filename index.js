@@ -8,7 +8,7 @@ async function setContent(){
   content = await response.text();
   content = marked.parse(content);
   content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
-  content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="/imgs/$1">`);
+  content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="imgs/$1">`);
   content = `<h1>${title}</h1>` + content;
   contentBox.innerHTML = content;
 }
