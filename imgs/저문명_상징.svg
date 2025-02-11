@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="500 500 2000 2000" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer" vectornator:layerName="Layer">
+<g opacity="1" vectornator:layerName="그룹 1">
+<path d="M2340 1130L2000 1385L2150.69 1495L2493.25 1244.94L2340 1130Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="곡선"/>
+<path d="M1500 500C947.715 500 500 947.715 500 1500C500 2052.28 947.715 2500 1500 2500L1993.25 2130.06L2333.34 1875L2500 1750L2500 1250L2157.53 1500L1993.25 1619.94L1643.84 1875L1500 1980L1500 1770L1637 1870L1986.5 1614.88L1840 1505L1500 1760L1500 1750L1833.34 1500L1993.25 1380.06L2333.34 1125L2500 1000L2500 500L1993.25 869.938L1643.84 1125L1500 1230L1500 1020L1637 1120L1986.5 864.875L1500 500Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="곡선"/>
+<path d="M2340 1880L2000 2135L2500 2500L2500 2000L2340 1880Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="곡선"/>
+</g>
+</g>
+</svg>
