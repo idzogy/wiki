@@ -21,8 +21,9 @@ async function getContent(str){
 
 async function readTemplates(str) {
     const reg = /\{\{(틀:[^{}]+)\}\}/;
-    
+    contentBox.innerHTML+='reading started';
     while(str.match(reg)) {
+        contentBox.innerHTML+=`match:${str.match(reg)[0]}`;
         const replacing = await getContent(str.match(reg)[1]);
         str = str.replace(str.match(reg)[0], replacing);
     }
