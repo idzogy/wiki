@@ -14,7 +14,8 @@ async function setContent(){
 
 async function getContent(str){
     const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${str}.md`);
-    return await response.text();
+    i = await response.text();
+    return i;
 }
 
 setContent();
