@@ -5,7 +5,7 @@ const contentBox = document.getElementById('content');
 
 async function setContent(){
     content = await getContent(title);
-    content = await readTemplates(content);
+    //content = await readTemplates(content);
     content = marked.parse(content);
     content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
     content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="imgs/$1">`);
