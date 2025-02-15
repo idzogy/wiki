@@ -39,6 +39,7 @@ a{
 }
 
 img{
+  display: inline-block;
   max-height: 300px;
 }
 
