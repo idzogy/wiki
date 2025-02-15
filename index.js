@@ -3,9 +3,9 @@ let content = '';
 
 const contentBox = document.getElementById('content');
 
-function setContent(){
-    content = getContent(title);
-    content = content.replace(/\{\{(틀:[^{}]+)\}\}/g, (match, str) => getContent(str));
+async function setContent(){
+    content = await getContent(title);
+    content = content.replace(/\{\{(틀:[^{}]+)\}\}/g, (match, str) => await getContent(str));
     content = marked.parse(content);
     content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
     content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="imgs/$1">`);
