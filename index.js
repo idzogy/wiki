@@ -20,13 +20,11 @@ async function getContent(str){
 
 
 async function readTemplates(str) {
-    const regex = /\{\{(틀:[^{}]+)\}\}/g;
-    let match;
+    const reg = /\{\{(틀:[^{}]+)\}\}/;
     
-    while((match = regex.exec(str)) !== null) {
-        const replacing = await getContent(match[1]);
-        str = str.replace(match[0], replacing);
-        regex.lastIndex = 0;
+    while(str.match(reg)) {
+        const replacing = await getContent(str.match(reg)[1]);
+        str = str.replace(str.match(reg)[0], replacing);
     }
     
     return str;
