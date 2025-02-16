@@ -57,6 +57,7 @@ blockquote{
 
 table{
   border-collapse: collapse;
+  border: 1px solid var(--vapour);
   font-size: inherit;
 }
 
@@ -71,6 +72,25 @@ th, td{
 
 th{
   background-color: var(--light);
+}
+
+tr:first-child th,
+tr:first-child td{
+  border-top: none;
+}
+
+tr:last-child td{
+  border-bottom: none;
+}
+
+td:first-child,
+th:first-child{
+  border-left: none;
+}
+
+td:last-child,
+th:last-child{
+  border-right: none;
 }
 
 #content{
