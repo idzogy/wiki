@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="-4.54747e-13 500 3000 2000" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer" vectornator:layerName="Layer">
+<path d="M0 500L3000 500L3000 2500L0 2500L0 500Z" fill="#f5f5f5" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="직사각형 1"/>
+<path d="M-2.27374e-13 500L3000 500L3000 2000L-2.27374e-13 2000L-2.27374e-13 500Z" fill="#56a056" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="직사각형 3"/>
+<path d="M-4.54747e-13 2250L3000 2250L3000 2500L-4.54747e-13 2500L-4.54747e-13 2250Z" fill="#148fcc" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="직사각형 5"/>
+<path d="M1676.78 896.447L1500 1073.22L1323.22 896.447L1146.45 1073.22L1323.22 1250L1146.45 1426.78L1323.22 1603.55L1500 1426.78L1676.78 1603.55L1853.55 1426.78L1676.78 1250L1853.55 1073.22L1676.78 896.447Z" fill="#f5f5f5" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="곡선"/>
+</g>
+</svg>
