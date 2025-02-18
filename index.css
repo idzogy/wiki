@@ -55,6 +55,14 @@ blockquote{
   color: var(--ash);
 }
 
+summary {
+  list-style-type: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 table{
   border-collapse: collapse;
   border: 1px solid var(--vapour);
@@ -63,6 +71,11 @@ table{
 
 table+table{
   margin-top: 16px;
+}
+
+table table{
+  margin: 0;
+  border: none;
 }
 
 th, td{
