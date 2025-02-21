@@ -1,19 +1,42 @@
 const title = new URL(window.location.href).searchParams.get('title');
 let content = '';
 const contentBox = document.getElementById('content');
-const reg = /\{\{(틀:[^{}]+)\}\}/;
+const func = /\(\(([^()]+)\)\)/;
+const temp = /\{\{(틀:[^{}]+)\}\}/;
+const tempVar = /<<([^<>]+)>>/;
+let tempVars = {};
 
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
     content = await response1.text();
     
     // templates
-    while(reg.test(content)){
-        const match = content.match(reg)[1];
-        const response2 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${match}.md`);
-        const replacing = await response2.text();
+    while(temp.test(content)){
+        tempVars = {};
         
-        content = content.replace(reg, replacing)
+        let match = content.match(temp)[1].replaceAll('\n', '');
+        
+        while(match.includes('|')){
+            match = match.replace(/\|([^|=]+)=([^|=]+)/, (m, variable, value) => {tempVars[variable] = value;return '';});
+        }
+        
+        const response2 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${match}.md`);
+        let replacing = await response2.text();
+        
+        while(tempVar.test(replacing)){
+            content = content.replace(tempVar, (m, p1) => tempVars[p1]);
+        }
+        
+        while(func.test(replacing)){
+            replacing = replacing.replace(func, (m, p1) => new Function(`return ${p1}`)())
+        }
+        
+        content = content.replace(temp, replacing);
+    }
+    
+    // functions
+    while(func.test(content)){
+        content = content.replace(func, (match, p1) => new Function(`return ${p1}`)());
     }
     
     content = marked.parse(content);
