@@ -18,7 +18,7 @@ jobs:
         run: sudo apt-get install tree
 
       - name: edit
-        run: tree -J src > assets/tree.json
+        run: tree -J docs > assets/tree.json
 
       - name: commit
         run: |
