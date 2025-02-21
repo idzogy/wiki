@@ -1,0 +1,27 @@
+name: Update Tree JSON
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+
+jobs:
+  update-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install
+        run: sudo apt-get install tree
+
+      - name: edit
+        run: tree -J src > assets/tree.json
+
+      - name: commit
+        run: |
+          git add assets/tree.json
+          git commit -m "Update assets/tree.json"
+          git push
