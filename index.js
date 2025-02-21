@@ -1,7 +1,6 @@
 const title = new URL(window.location.href).searchParams.get('title');
 let content = '';
 const contentBox = document.getElementById('content');
-const func = /\(\(([^()]+)\)\)/;
 const temp = /\{\{(틀:[^{}]+)\}\}/;
 const tempVar = /<<([^<>]+)>>/;
 let tempVars = {};
@@ -27,17 +26,13 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        while(func.test(replacing)){
-            replacing = replacing.replace(func, (m, p1) => new Function(`return ${p1}`)())
-        }
+        replacing = new Function(`return \`${replacing}\`;`)();
         
         content = content.replace(temp, replacing);
     }
     
     // functions
-    while(func.test(content)){
-        content = content.replace(func, (match, p1) => new Function(`return ${p1}`)());
-    }
+    content = new Function(`return \`${content}\`;`)();
     
     content = marked.parse(content);
     content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
