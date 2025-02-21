@@ -7,6 +7,10 @@ on:
     paths:
       - 'docs/**'
 
+permissions:
+  contents: write
+
+
 jobs:
   update-tree:
     runs-on: ubuntu-latest
