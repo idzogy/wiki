@@ -24,7 +24,7 @@ async function setContent(){
         let replacing = await response2.text();
         
         while(tempVar.test(replacing)){
-            content = content.replace(tempVar, (m, p1) => tempVars[p1]);
+            replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
         while(func.test(replacing)){
