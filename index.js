@@ -45,7 +45,8 @@ async function setContent(){
 
 async function setDocuments(){
     const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/assets/tree.json`);
-    documents = await response.json()[0]['contents'].map(doc => doc['name'].slice(0,-3));
+    documents = await response.json();
+    documents = documents[0]['contents'].map(doc => doc['name'].slice(0,-3));
 }
 
 function search(s){
