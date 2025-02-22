@@ -52,7 +52,7 @@ async function setDocuments(){
 function search(s){
     resultBox.innerHTML = '';
     documents.filter(row => row.includes(s)).sort((a,b) => sort(a,b,s)).slice(0,8).forEach(docName => {
-        resultBox.innerHTML = `<div><a href="?title=${docName}" style="color:var(--text);">${docName}</a></div>`;
+        resultBox.innerHTML += `<div><a href="?title=${docName}" style="color:var(--text);">${docName}</a></div>`;
     });
 }
 
