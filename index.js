@@ -28,13 +28,17 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        replacing = new Function(`return \`${marked.parse(replacing)}\`;`)();
+        replacing = new Function(`return \`${replacing}\`;`)();
+        
+        replacing = marked.parse(replacing);
         
         content = content.replace(temp, replacing);
     }
     
     // functions
-    content = new Function(`return \`${marked.parse(content)}\`;`)();
+    content = new Function(`return \`${content}\`;`)();
+    
+    content = marked.parse(content);
     
     // custom
     content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
