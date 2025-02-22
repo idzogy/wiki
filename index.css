@@ -137,7 +137,13 @@ td:last-child, th:last-child{
 }
 
 #result div:first-child{
-  border-top: 1px solid var(--cloud);
+  border-top: 1px solid var(--vapour);
+}
+
+#result div a{
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #content{
