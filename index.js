@@ -28,7 +28,7 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        replacing = new Function(`return \`${replacing}\`;`)();
+        replacing = readCode(replacing);
         
         replacing = marked.parse(replacing);
         
@@ -36,7 +36,7 @@ async function setContent(){
     }
     
     // functions
-    content = new Function(`return \`${content}\`;`)();
+    content = readCode(content);
     
     content = marked.parse(content);
     
@@ -52,6 +52,10 @@ async function setDocuments(){
     const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/assets/tree.json`);
     documents = await response.json();
     documents = documents[0]['contents'].map(doc => doc['name'].slice(0,-3));
+}
+
+function readCode(s){
+    return new Function(`return \`${s.replace('\`','\\`')}\`;`)();
 }
 
 function search(s){
