@@ -9,7 +9,7 @@ let tempVars = {};
 const func = /\$\{(.+?)\}/g;
 
 async function setContent(){
-    const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
+    const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title.length > 0 ? title : '대문'}.md`);
     content = await response1.text();
     
     // templates
