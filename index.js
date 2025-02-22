@@ -37,7 +37,7 @@ async function setContent(){
     }
     
     // functions
-    content = content.replace(func, (m, p1) => {return new Function(`return ${p1}`)()});
+    content = content.replace(func, (m, p1) => {p1 = p1.replace(/[`'"]/g, '\\$&');return new Function(`return ${p1}`)()});
     
     content = marked.parse(content);
     
