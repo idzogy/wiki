@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="header">
-        <input id="input" spellcheck="false" oninput="search(this.value)" onchange="resultBox.innerHTML = '';">
+        <input id="input" spellcheck="false" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
         <div id="result"></div>
     </div>
 	<div id="content"></div>
