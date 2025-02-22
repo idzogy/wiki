@@ -109,6 +109,8 @@ td:last-child, th:last-child{
   top: 0;
   width: 100%;
   border: 1px solid var(--vapour);
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 #input{
@@ -120,6 +122,8 @@ td:last-child, th:last-child{
   border: none;
   border-bottom: 1px solid var(--vapour);
   outline: none;
+  background-color: inherit;
+  color: inherit;
   font-size: inherit;
   font-family: inherit;
 }
@@ -135,7 +139,7 @@ td:last-child, th:last-child{
 
 #content{
   width: max(300px, 80%);
-  margin: 0 auto;
+  margin: 32px auto 0;
   margin-bottom: 50px;
 }
 
