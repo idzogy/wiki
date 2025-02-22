@@ -133,7 +133,6 @@ td:last-child, th:last-child{
 
 #result div{
   height: 32px;
-  padding: 8px 16px;
 }
 
 #result div:first-child{
@@ -144,6 +143,7 @@ td:last-child, th:last-child{
   display: flex;
   align-items: center;
   height: 100%;
+  padding: 8px 16px;
 }
 
 #content{
