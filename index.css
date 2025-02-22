@@ -108,7 +108,7 @@ td:last-child, th:last-child{
   position: fixed;
   top: 0;
   width: 100%;
-  border: 1px solid var(--vapour);
+  border-bottom: 1px solid var(--vapour);
   background-color: var(--bg);
   color: var(--text);
 }
@@ -120,7 +120,6 @@ td:last-child, th:last-child{
   padding: 8px 16px;
   border-radius: 0;
   border: none;
-  border-bottom: 1px solid var(--vapour);
   outline: none;
   background-color: inherit;
   color: inherit;
@@ -129,7 +128,7 @@ td:last-child, th:last-child{
 }
 
 #result{
-  width:100%;
+  width: 100%;
 }
 
 #result div{
@@ -137,10 +136,13 @@ td:last-child, th:last-child{
   padding: 8px 16px;
 }
 
+#result div:first-child{
+  border-top: var(--cloud);
+}
+
 #content{
   width: max(300px, 80%);
-  margin: 32px auto 0;
-  margin-bottom: 50px;
+  margin: 64px auto;
 }
 
 .td{
