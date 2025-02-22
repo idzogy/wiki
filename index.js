@@ -6,7 +6,7 @@ const contentBox = document.getElementById('content');
 const temp = /\{\{(틀:[^{}]+)\}\}/;
 const tempVar = /<<([^<>]+)>>/;
 let tempVars = {};
-const func = /\$\{(.+?)\}/;
+const func = /\$\{(.+?)\}/g;
 
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
@@ -29,7 +29,7 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        replacing = replacing.replaceAll(func, (m, p1) => {return new Function(`return ${p1}`)()});
+        replacing = replacing.replace(func, (m, p1) => {return new Function(`return ${p1}`)()});
         
         replacing = marked.parse(replacing);
         
@@ -37,7 +37,7 @@ async function setContent(){
     }
     
     // functions
-    content = content.replaceAll(func, (m, p1) => {return new Function(`return ${p1}`)()});
+    content = content.replace(func, (m, p1) => {return new Function(`return ${p1}`)()});
     
     content = marked.parse(content);
     
