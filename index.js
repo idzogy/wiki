@@ -1,4 +1,4 @@
-const title = new URL(window.location.href).searchParams.get('title');
+const title = new URL(window.location.href).searchParams.get('title') || '대문';
 let content = '';
 let documents = [];
 const resultBox = document.getElementById('result');
@@ -9,7 +9,7 @@ let tempVars = {};
 const func = /\$\{(.+?)\}/g;
 
 async function setContent(){
-    const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title.length > 0 ? title : '대문'}.md`);
+    const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
     content = await response1.text();
     
     // templates
