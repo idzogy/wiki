@@ -140,6 +140,7 @@ td:last-child, th:last-child{
 }
 
 #result div a{
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   height: 100%;
