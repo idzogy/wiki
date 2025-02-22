@@ -6,6 +6,7 @@ const contentBox = document.getElementById('content');
 const temp = /\{\{(틀:[^{}]+)\}\}/;
 const tempVar = /<<([^<>]+)>>/;
 let tempVars = {};
+const func = /\$\{(.+?)\}/;
 
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
@@ -28,7 +29,7 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        replacing = readCode(replacing);
+        replacing = replacing.replaceAll(func, (m, p1) => {return new Function(`return ${p1}`)()});
         
         replacing = marked.parse(replacing);
         
@@ -36,7 +37,7 @@ async function setContent(){
     }
     
     // functions
-    content = readCode(content);
+    content = content.replaceAll(func, (m, p1) => {return new Function(`return ${p1}`)()});
     
     content = marked.parse(content);
     
@@ -52,10 +53,6 @@ async function setDocuments(){
     const response = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/assets/tree.json`);
     documents = await response.json();
     documents = documents[0]['contents'].map(doc => doc['name'].slice(0,-3));
-}
-
-function readCode(s){
-    return new Function(`return \`${s.replace('\`','\\`')}\`;`)();
 }
 
 function search(s){
