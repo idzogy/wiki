@@ -66,7 +66,6 @@ summary::-webkit-details-marker {
 
 table{
   border-collapse: collapse;
-  border: 1px solid var(--vapour);
   font-size: inherit;
 }
 
@@ -105,6 +104,10 @@ tr>*:first-child{
 
 tr>*:last-child{
   border-right: none;
+}
+
+table{
+  border: 1px solid var(--vapour);
 }
 
 #header{
