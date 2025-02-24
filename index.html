@@ -10,8 +10,10 @@
 <body>
     <div id="header">
         <div id="top">
-            <img src="imgs/이저그_로고.svg">
-            <img src="imgs/이저그_워드마크.svg">
+            <a href="./">
+                <img src="imgs/이저그_로고.svg">
+                <img src="imgs/이저그_워드마크.svg">
+            </a>
         </div>
         <input id="input" spellcheck="false" onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
         <div id="result"></div>
