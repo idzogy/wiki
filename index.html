@@ -16,7 +16,7 @@
         <input id="input" spellcheck="false" onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
         <div id="result"></div>
     </div>
-	<div id="content"></div>
+	<div id="content" onclick="resultBox.innerHTML = '';"></div>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="./index.js"></script>
 </body>
