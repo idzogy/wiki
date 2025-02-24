@@ -168,7 +168,8 @@ tr>*:last-child{
 
 #content{
   width: max(300px, 80%);
-  margin: 112px auto;
+  margin: 0 auto;
+  padding: 112px 64px 0;
 }
 
 .td{
