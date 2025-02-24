@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="487.87222"
+   height="167.616"
+   viewBox="0 0 129.08286 44.348399"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.1190784"
+     inkscape:cx="457.03831"
+     inkscape:cy="502.81292"
+     inkscape:window-width="1920"
+     inkscape:window-height="1046"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-60.116512,-100.16936)">
+    <path
+       d="m 97.708512,100.16936 v 44.3484 h -6.858 v -44.3484 z m -24.739599,30.48 q -3.7084,0 -6.6548,-1.6764 -2.8956,-1.7272 -4.572,-4.7244 -1.6256,-2.9972 -1.6256,-6.858 0,-3.9116 1.6256,-6.9596 1.6764,-3.048 4.572,-4.7244 2.9464,-1.7272 6.6548,-1.7272 3.708399,0 6.603999,1.7272 2.8956,1.6764 4.5212,4.7244 1.6256,3.048 1.6256,6.9596 0,3.8608 -1.6256,6.858 -1.6256,2.9972 -4.5212,4.7244 -2.8956,1.6764 -6.603999,1.6764 z m 0,-5.6388 q 2.793999,0 4.419599,-2.0828 1.6764,-2.0828 1.6764,-5.5372 0,-3.5052 -1.6764,-5.588 -1.6256,-2.1336 -4.419599,-2.1336 -2.794,0 -4.4704,2.1336 -1.6764,2.0828 -1.6764,5.588 0,3.4544 1.6764,5.5372 1.6764,2.0828 4.4704,2.0828 z m 69.189627,-24.8412 v 44.3484 h -6.7564 v -24.638 h -7.7216 v -5.4356 h 7.7216 v -14.2748 z m -39.0652,29.5148 8.2296,-11.176 q 1.3208,-1.8288 1.7272,-3.048 0.4572,-1.27 0.4572,-2.8956 v -2.8448 h -8.636 v -5.4864 h 24.0284 v 5.4864 h -8.5852 v 2.8448 q 0,1.6256 0.4064,2.8956 0.4572,1.2192 1.778,3.048 l 8.2296,11.176 -5.08,3.7592 -8.2296,-11.2776 -0.508,-0.7112 -0.508,0.7112 -8.2296,11.2776 z m 86.10603,3.3528 v 5.4864 h -41.3512 v -5.4864 z m -6.7564,-4.572 h -6.858 v -18.7452 h -23.0124 v -5.5372 h 29.8704 z"
+       id="text1"
+       style="-inkscape-font-specification:'SUITE, Ultra-Bold';stroke-width:26.4583;stroke-linecap:square"
+       aria-label="이저그" />
+  </g>
+</svg>
