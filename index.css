@@ -108,6 +108,7 @@ tr>*:last-child{
 }
 
 #header{
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -169,7 +170,7 @@ tr>*:last-child{
 #content{
   width: max(300px, 80%);
   margin: 0 auto;
-  padding: 112px 0 64px;
+  padding: 96px 0 64px;
 }
 
 .td{
