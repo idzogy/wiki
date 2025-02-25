@@ -30,8 +30,10 @@ async function setContent(){
         }
         
         replacing = replacing.replace(func, (m, p1) => {return eval(p1);});
+        console.log(`틀(파싱 전): ${replacing}`);
         
         replacing = marked.parse(replacing);
+        console.log(`틀(파싱 후): ${replacing}`);
         
         content = content.replace(temp, replacing);
     }
