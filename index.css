@@ -56,6 +56,10 @@ blockquote{
   color: var(--ash);
 }
 
+blockquote p{
+  margin: 0;
+}
+
 summary {
   list-style-type: none;
 }
