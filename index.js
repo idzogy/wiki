@@ -29,7 +29,7 @@ async function setContent(){
             replacing = replacing.replace(tempVar, (m, p1) => tempVars[p1] || '');
         }
         
-        replacing = replacing.replace(func, (m, p1) => {return new Function(`return ${p1}`)()});
+        replacing = replacing.replace(func, (m, p1) => {return eval(p1);});
         
         replacing = marked.parse(replacing);
         
@@ -37,7 +37,7 @@ async function setContent(){
     }
     
     // functions
-    content = content.replace(func, (m, p1) => {return new Function(`return ${p1}`)()});
+    content = content.replace(func, (m, p1) => {return eval(p1);});
     
     content = marked.parse(content);
     
