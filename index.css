@@ -51,7 +51,7 @@ h2{
 
 blockquote{
   margin-left: 0;
-  padding: 4px 12px;
+  padding: 8px 12px;
   border-left: 4px solid var(--vapour);
   color: var(--ash);
 }
