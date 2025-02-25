@@ -88,21 +88,21 @@ th{
   background-color: var(--light);
 }
 
-table > :first-child > tr:not([style*="display: none"]):first-child > th:not([style*="display: none"]),
-table > :first-child > tr:not([style*="display: none"]):first-child > td:not([style*="display: none"]){
+table > :first-child > tr:first-child > th,
+table > :first-child > tr:first-child > td{
   border-top: none;
 }
 
-table > :last-child > tr:not([style*="display: none"]):last-child > th:not([style*="display: none"]), 
-table > :last-child > tr:not([style*="display: none"]):last-child > td:not([style*="display: none"]){
+table > :last-child > tr:last-child > th, 
+table > :last-child > tr:last-child > td{
   border-bottom: none;
 }
 
-tr:not([style*="display: none"]) > *:not([style*="display: none"]):first-child{
+tr > *:first-child{
   border-left: none;
 }
 
-tr:not([style*="display: none"]) > *:not([style*="display: none"]):last-child{
+tr > *:last-child{
   border-right: none;
 }
 
