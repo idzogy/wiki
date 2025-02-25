@@ -88,21 +88,21 @@ th{
   background-color: var(--light);
 }
 
-table> :first-child> tr:not[display:none]:first-child> th:not[display:none],
-table> :first-child> tr:not[display:none]:first-child> td:not[display:none]{
+table> :first-child> tr:not([display:none]):first-child> th:not([display:none]),
+table> :first-child> tr:not([display:none]):first-child> td:not([display:none]){
   border-top: none;
 }
 
-table> :last-child> tr:not[display:none]:last-child> th:not[display:none], 
-table> :last-child> tr:not[display:none]:last-child> td:not[display:none]{
+table> :last-child> tr:not([display:none]):last-child> th:not([display:none]), 
+table> :last-child> tr:not([display:none]):last-child> td:not([display:none]){
   border-bottom: none;
 }
 
-tr:not[display:none]>*:not[display:none]:first-child{
+tr:not([display:none])>*:not([display:none]):first-child{
   border-left: none;
 }
 
-tr:not[display:none]>*:not[display:none]:last-child{
+tr:not([display:none])>*:not([display:none]):last-child{
   border-right: none;
 }
 
