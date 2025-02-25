@@ -88,13 +88,13 @@ th{
   background-color: var(--light);
 }
 
-table> :first-child tr:first-child th,
-table> :first-child tr:first-child td{
+table> :first-child> tr:first-child> th,
+table> :first-child> tr:first-child> td{
   border-top: none;
 }
 
-table> :last-child tr:last-child th, 
-table> :last-child tr:last-child td{
+table> :last-child> tr:last-child> th, 
+table> :last-child> tr:last-child> td{
   border-bottom: none;
 }
 
