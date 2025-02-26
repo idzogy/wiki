@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 500 3000 2000" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer">
+<path d="M0 500L3000 500L3000 2500L0 2500L0 500Z" fill="#ffd24d" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1500 500L3000 500L3000 2500L1500 2500L1500 500Z" fill="#628c38" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M650 1000L650 1112.59C509.436 1148.77 398.771 1259.44 362.594 1400L250 1400L250 1600L362.594 1600C398.771 1740.56 509.436 1851.23 650 1887.41L650 2000L850 2000L850 1887.41C990.564 1851.23 1101.23 1740.56 1137.41 1600L1250 1600L1250 1400L1137.41 1400C1101.23 1259.44 990.564 1148.77 850 1112.59L850 1000L650 1000ZM650 1217.16L650 1400L467.156 1400C497.286 1314.78 564.776 1247.29 650 1217.16ZM850 1217.16C935.224 1247.29 1002.71 1314.78 1032.84 1400L850 1400L850 1217.16ZM467.156 1600L650 1600L650 1782.84C564.777 1752.71 497.287 1685.22 467.156 1600ZM850 1600L1032.84 1600C1002.71 1685.22 935.223 1752.71 850 1782.84L850 1600Z" fill="#bf451d" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1500 500L1500 750L2035.72 1500L1500 2250L1500 2500L1750 2500L2250 1800L2750 2500L3000 2500L3000 2250L2464.28 1500L3000 750L3000 500L2750 500L2250 1200L1750 500L1500 500Z" fill="#f5f5f5" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>
