@@ -3,7 +3,7 @@ let content = '';
 let documents = [];
 const resultBox = document.getElementById('result');
 const contentBox = document.getElementById('content');
-const temp = /\{\{(틀:[^{}]+)\}\}/;
+const temp = /\{\{([^{}]+)\}\}/;
 const tempVar = /<<([^<>]+)>>/;
 let tempVars = {};
 const func = /\$\{(.+?)\}/g;
@@ -22,7 +22,7 @@ async function setContent(){
             match = match.replace(/\|([^|=]+)=([^|=]+)/, (m, variable, value) => {tempVars[variable] = value;return '';});
         }
         
-        const response2 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${match}.md`);
+        const response2 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/templates/${match}.md`);
         let replacing = await response2.text();
         
         while(tempVar.test(replacing)){
