@@ -1,4 +1,8 @@
-const title = new URL(window.location.href).searchParams.get('title') || '대문';
+const title = sessionStorage.getItem('title') || '대문';
+sessionStorage.removeItem('redirect-path');
+hisotry.replaceState(null, '', `/${title}`);
+document.title = `${title} - 이저그`;
+
 let content = '';
 let documents = [];
 const resultBox = document.getElementById('result');
@@ -44,7 +48,7 @@ async function setContent(){
     content = marked.parse(content);
     
     // custom
-    content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="?title=$1">$1</a>`);
+    content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="/$1">$1</a>`);
     content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="imgs/$1">`);
     
     content = `<h1>${title}</h1>` + content;
