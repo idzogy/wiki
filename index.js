@@ -1,6 +1,6 @@
 const title = sessionStorage.getItem('title') || '대문';
 sessionStorage.removeItem('redirect-path');
-hisotry.replaceState(null, '', `/${title}`);
+history.replaceState(null, '', `/${title}`);
 document.title = `${title} - 이저그`;
 
 let content = '';
