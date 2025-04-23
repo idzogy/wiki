@@ -1,6 +1,6 @@
 const title = sessionStorage.getItem('title') || '대문';
 sessionStorage.removeItem('redirect-path');
-history.replaceState(null, '', `/${title}`);
+history.replaceState(null, '', `/wiki/${title}`);
 document.title = `${title} - 이저그`;
 
 let content = '';
@@ -48,8 +48,8 @@ async function setContent(){
     content = marked.parse(content);
     
     // custom
-    content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="/$1">$1</a>`);
-    content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="imgs/$1">`);
+    content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="./$1">$1</a>`);
+    content = content.replace(/\!\[\[([^\[\]]+)\]\]/g, `<img src="./imgs/$1">`);
     
     content = `<h1>${title}</h1>` + content;
     contentBox.innerHTML = content;
@@ -64,7 +64,7 @@ async function setDocuments(){
 function search(s){
     resultBox.innerHTML = '';
     documents.filter(row => row.includes(s)).sort((a,b) => sort(a,b,s)).slice(0,8).forEach(docName => {
-        resultBox.innerHTML += `<a href="?title=${docName}" style="color:var(--text);">${docName}</a>`;
+        resultBox.innerHTML += `<a href="./${docName}" style="color:var(--text);">${docName}</a>`;
     });
 }
 
