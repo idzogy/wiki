@@ -180,7 +180,8 @@ table{
 #content{
   width: max(300px, 80%);
   margin: 0 auto;
-  padding: 96px 0 64px;
+  padding: 0;
+  /* padding: 96px 0 64px; */
 }
 
 .td{
