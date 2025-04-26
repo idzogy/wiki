@@ -1,5 +1,5 @@
 const title = sessionStorage.getItem('title') || '대문';
-sessionStorage.removeItem('redirect-path');
+sessionStorage.removeItem('title');
 history.replaceState(null, '', `/wiki/${title}`);
 document.title = `${title} - 이저그`;
 
