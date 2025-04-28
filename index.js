@@ -12,6 +12,8 @@ const tempVar = /<<([^<>]+)>>/;
 let tempVars = {};
 const func = /\$\{(.+?)\}/g;
 
+const md = window.markdownit().use(window.markdownitFootnote);
+
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
     content = await response1.text();
@@ -36,7 +38,7 @@ async function setContent(){
         replacing = replacing.replace(func, (m, p1) => {return eval(p1);});
         console.log(`틀(파싱 전): ${replacing}`);
         
-        replacing = marked.parse(replacing);
+        replacing = md.render(replacing);
         console.log(`틀(파싱 후): ${replacing}`);
         
         content = content.replace(temp, replacing);
@@ -45,7 +47,7 @@ async function setContent(){
     // functions
     content = content.replace(func, (m, p1) => {return eval(p1);});
     
-    content = marked.parse(content);
+    content = md.render(content);
     
     // custom
     content = content.replace(/(?<=[^\!])\[\[([^\[\]]+)\]\]/g, `<a href="./$1">$1</a>`);
