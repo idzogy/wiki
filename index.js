@@ -14,7 +14,7 @@ const func = /\$\{(.+?)\}/g;
 
 const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
-.use(window.markdownitMultimdTableExt);
+.use(window.markdownitMultimdTable);
 
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
