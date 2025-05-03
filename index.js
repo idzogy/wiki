@@ -14,7 +14,7 @@ const func = /\$\{(.+?)\}/g;
 
 const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
-.use(window.markdownitMultimdTable)
+.use(window.markdownitMultimdTable, { headerless: true, rowspan: true })
 .use(markdownitTh);
 
 function markdownitTh(md){
