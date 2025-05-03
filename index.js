@@ -14,7 +14,25 @@ const func = /\$\{(.+?)\}/g;
 
 const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
-.use(window.markdownitMultimdTable);
+.use(window.markdownitMultimdTable)
+.use(markdownitTh);
+
+function markdownitTh(md){
+    md.core.ruler.after('block', 'th', function(state){
+    const tokens = state.tokens;
+    
+    for(let i = 0; i < tokens.length; i++){
+        const token = tokens[i];
+        if(token.type === 'inline' && tokens[i - 1]?.type === 'td_open'){
+            if(token.content.startsWith('# ')){
+                tokens[i - 1].tag = 'th';
+                tokens[i + 1].tag = 'th';
+                token.content = token.content.slice(2);
+            }
+        }
+    }
+    });
+}
 
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
