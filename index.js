@@ -15,8 +15,29 @@ const func = /\$\{(.+?)\}/g;
 const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
 .use(window.markdownitMultimdTable, { headerless: true, rowspan: true })
-.use(window.markdownitContainer)
-.use(markdownitTh);
+.use(markdownitTh)
+.use(window.markdownitContainer, 'info', {
+    render: function(tokens, idx){
+        const token = tokens[idx];
+        if(token.nesting === 1){
+            return '<div class="info">\n';
+        }
+        else{
+            return '</div>\n';
+        }
+    }
+})
+.use(window.markdownitContainer, 'quote', {
+    render: function(tokens, idx){
+        const token = tokens[idx];
+        if(token.nesting === 1){
+            return '<div class="quote">\n';
+        }
+        else{
+            return '</div>\n';
+        }
+    }
+});
 
 function markdownitTh(md){
     md.core.ruler.after('block', 'th', function(state){
