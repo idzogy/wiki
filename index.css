@@ -203,7 +203,7 @@ table{
   box-sizing: border-box;
   width: max-content;
   max-width: max(300px, 80%);
-  padding: 12px 24px;
+  padding: 18px 24px;
   border: 2px dashed var(--vapour);
 }
 
@@ -216,4 +216,12 @@ table{
   background-color: var(--light);
   border-left: 4px solid var(--vapour);
   border-right: 4px solid var(--vapour);
+}
+
+.info p{
+  margin: 0;
+}
+
+.quote p{
+  margin: 0;
 }
