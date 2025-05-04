@@ -39,6 +39,30 @@ const md = window.markdownit({ html: true })
     }
 });
 
+let depth = 0;
+
+md.renderer.rules.table_open = function(tokens, idx){
+    depth++;
+    
+    if(depth === 1){
+		return '<div class="table-container">\n<table>\n';
+	}
+    else{
+		return '<table>\n';
+	}
+};
+
+md.renderer.rules.table_close = function(tokens, idx){
+    depth--;
+    
+    if(depth === 0){
+		return '</table>\n</div>\n';
+	}
+    else{
+		return '</table>\n';
+	}
+};
+
 function markdownitTh(md){
     md.core.ruler.after('block', 'th', function(state){
     const tokens = state.tokens;
