@@ -80,6 +80,13 @@ function markdownitTh(md){
     });
 }
 
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        processEscapes: true
+    }
+});
+
 async function setContent(){
     const response1 = await fetch(`https://raw.githubusercontent.com/idzogy/wiki/main/docs/${title}.md`);
     content = await response1.text();
