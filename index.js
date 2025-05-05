@@ -37,7 +37,8 @@ const md = window.markdownit({ html: true })
             return '</div>\n';
         }
     }
-});
+})
+.use(window.markdownitKatex);
 
 let depth = 0;
 
