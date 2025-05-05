@@ -205,6 +205,14 @@ table{
   padding: 8px 16px;
 }
 
+.emph{
+  width: max-content;
+  max-width: max(300px, 100%);
+  padding: 8px 16px;
+  border: 1px solid var(--vapour);
+  border-left: 8px solid var(--brand);
+}
+
 .info{
   box-sizing: border-box;
   width: max-content;
