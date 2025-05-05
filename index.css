@@ -232,6 +232,10 @@ table{
   border-right: 4px solid var(--vapour);
 }
 
+.emph p{
+  margin: 0;
+}
+
 .info p{
   margin: 0;
 }
