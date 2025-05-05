@@ -16,6 +16,17 @@ const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
 .use(window.markdownitMultimdTable, { headerless: true, rowspan: true })
 .use(markdownitTh)
+.use(window.markdownitContainer, 'emph', {
+    render: function(tokens, idx){
+        const token = tokens[idx];
+        if(token.nesting === 1){
+            return '<div class="emph">\n';
+        }
+        else{
+            return '</div>\n';
+        }
+    }
+})
 .use(window.markdownitContainer, 'info', {
     render: function(tokens, idx){
         const token = tokens[idx];
