@@ -37,8 +37,7 @@ const md = window.markdownit({ html: true })
             return '</div>\n';
         }
     }
-})
-.use(window.markdownitKatex);
+});
 
 let depth = 0;
 
@@ -122,6 +121,8 @@ async function setContent(){
     
     content = `<h1>${title}</h1>` + content;
     contentBox.innerHTML = content;
+    
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, contentBox]);
 }
 
 async function setDocuments(){
