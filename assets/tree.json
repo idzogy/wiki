@@ -9,6 +9,7 @@
     {"type":"file","name":"머즈에.md"},
     {"type":"file","name":"볼라퓌크 문법.md"},
     {"type":"file","name":"볼라퓌크.md"},
+    {"type":"file","name":"아우이.md"},
     {"type":"file","name":"아이진.md"},
     {"type":"file","name":"엽도.md"},
     {"type":"file","name":"이저그.md"},
@@ -17,5 +18,5 @@
     {"type":"file","name":"저왕국.md"}
   ]}
 ,
-  {"type":"report","directories":1,"files":15}
+  {"type":"report","directories":1,"files":16}
 ]
