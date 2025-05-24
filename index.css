@@ -4,9 +4,16 @@
   font-weight: 400 600;
   font-style: normal;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Regular.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Regular.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: bold;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-SemiBold.woff2') format('woff2');
+}
+
 ::-webkit-scrollbar{
   display: none;
 }
@@ -25,6 +32,8 @@
   --text: #3c3c3c;
   --link: #2878dc;
   --brand: #374faf;
+  
+  -bg-transparent: #ffffffc8;
 }
 
 body{
@@ -69,7 +78,11 @@ blockquote p{
   margin: 0;
 }
 
-summary {
+input::placeholder{
+  color: var(--smoke);
+}
+
+summary{
   list-style-type: none;
 }
 
@@ -125,13 +138,16 @@ table{
 }
 
 #header{
-  /* z-index: 1;
+  z-index: 1;
   position: fixed;
-  top: 0; */
+  top: 0;
+  display: grid;
   width: 100%;
   border-bottom: 1px solid var(--vapour);
-  background-color: var(--bg);
+  background-color: var(--bg-transparent);
   color: var(--text);
+  backdrop-filter: blur(4px);
+  grid-template-columns: 50% 50%;
 }
 
 #top{
@@ -140,7 +156,6 @@ table{
   align-items: center;
   height: 48px;
   padding: 0 16px;
-  background-color: var(--bg);
   font-size: 24px;
   line-height: 0;
 }
@@ -167,14 +182,13 @@ table{
 
 #input{
   box-sizing: border-box;
-  display: flex;
-  width: 100%;
+  display: block;
   height: 48px;
   padding: 8px 16px;
   border-radius: 0;
   border: none;
   outline: none;
-  background-color: inherit;
+  background-color: #00000000;
   color: inherit;
   font-size: inherit;
   font-family: inherit;
@@ -182,6 +196,7 @@ table{
 
 #result{
   width: 100%;
+  grid-column: span 2;
 }
 
 #result a{
@@ -197,7 +212,7 @@ table{
 
 #content{
   width: max(320px, 80%);
-  margin: 0 auto;
+  margin: 64px auto;
   padding: 0;
   /* padding: 96px 0 64px; */
 }
@@ -254,4 +269,10 @@ table{
 
 .quote p{
   margin: 0;
+}
+
+@media(min-width: 1024px){
+  #header{
+    grid-template-columns: 75% 25%;
+  }
 }
