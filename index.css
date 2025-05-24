@@ -56,7 +56,6 @@ img{
 
 h2{
   border-bottom: 1px solid var(--vapour);
-  font-weight: normal;
 }
 
 blockquote{
@@ -141,18 +140,13 @@ table{
   align-items: center;
   height: 48px;
   padding: 0 16px;
-  background-color: var(--brand);
-  color: var(--bg);
+  background-color: var(--bg);
   font-size: 24px;
   line-height: 0;
 }
 
 #top a{
   color: var(--bg);
-}
-
-#top div{
-  height: 24px;
 }
 
 #logo{
@@ -165,9 +159,8 @@ table{
 
 #wordmark{
   display: inline-block;
-  width: 30px;
+  width: 60px;
   height: 20px;
-  margin-left: 8px;
   mask: url('imgs/이저그_워드마크.svg') no-repeat center / contain;
   background-color: var(--text);
 }
