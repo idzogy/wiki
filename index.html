@@ -16,7 +16,7 @@
                 <div id="wordmark"></div>
             </a>
         </div>
-        <input id="input" spellcheck="false" onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
+        <input id="input" spellcheck="false" placeholder="검색어를 입력..." onclick="search(this.value)" oninput="search(this.value)" onchange="setTimeout(() => {resultBox.innerHTML = '';}, 1)">
         <div id="result"></div>
     </div>
 	<div id="content" onclick="resultBox.innerHTML = '';"></div>
