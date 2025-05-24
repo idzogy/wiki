@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @font-face {
   font-family: 'Pretendard';
-  font-weight: 400 600;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
   src: url('https://cdn.jsdelivr.net/gh/fonts-archive/Pretendard/Pretendard-Regular.woff2') format('woff2');
@@ -33,7 +33,7 @@
   --link: #2878dc;
   --brand: #374faf;
   
-  -bg-transparent: #ffffffc8;
+  --bg-transparent: #ffffffc8;
 }
 
 body{
@@ -235,6 +235,7 @@ table{
   box-sizing: border-box;
   width: max-content;
   max-width: max(320px, 100%);
+  margin-bottom: 24px;
   padding: 8px 16px;
   border: 1px solid var(--vapour);
   border-left: 8px solid var(--brand);
@@ -244,6 +245,7 @@ table{
   box-sizing: border-box;
   width: max-content;
   max-width: max(320px, 100%);
+  margin-bottom: 24px;
   padding: 18px 24px;
   border: 2px dashed var(--vapour);
 }
@@ -252,6 +254,7 @@ table{
   box-sizing: border-box;
   width: max-content;
   max-width: max(320px, 100%);
+  margin-bottom: 24px;
   padding: 12px 24px;
   color: var(--ash);
   background-color: var(--light);
