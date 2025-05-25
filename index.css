@@ -29,9 +29,10 @@
   --vapour: #dcdfe8;
   --smoke: #969696;
   --ash: #505050;
+  --abyss: #4b5064;
   --text: #3c3c3c;
   --link: #2878dc;
-  --brand: #374faf;
+  --brand: #1464dc;
   
   --bg-transparent: #ffffffc8;
 }
@@ -239,8 +240,10 @@ table{
   max-width: max(320px, 100%);
   margin-bottom: 24px;
   padding: 8px 16px;
-  border: 1px solid var(--vapour);
-  border-left: 8px solid var(--brand);
+  border-radius: 4px;
+  border-left: 6px solid var(--brand);
+  background-color: var(--light);
+  color: var(--abyss);
 }
 
 .info{
