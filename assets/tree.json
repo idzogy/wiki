@@ -12,6 +12,7 @@
     {"type":"file","name":"아우이 문법.md"},
     {"type":"file","name":"아우이.md"},
     {"type":"file","name":"아이진.md"},
+    {"type":"file","name":"에스페란토.md"},
     {"type":"file","name":"엽도.md"},
     {"type":"file","name":"이저그.md"},
     {"type":"file","name":"인공어.md"},
@@ -20,5 +21,5 @@
     {"type":"file","name":"저왕국.md"}
   ]}
 ,
-  {"type":"report","directories":1,"files":18}
+  {"type":"report","directories":1,"files":19}
 ]
