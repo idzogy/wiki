@@ -225,6 +225,10 @@ table{
   overflow-x: auto;
 }
 
+.table-container+.table-container{
+  margin-top: 16px;
+}
+
 .footnotes-sep{
   margin: 64px 0 32px;
   border: 1px solid var(--vapour);
