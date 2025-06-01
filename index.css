@@ -235,7 +235,7 @@ table{
   padding: 8px 16px;
 }
 
-.emph{
+.jump{
   box-sizing: border-box;
   width: max-content;
   max-width: max(320px, 100%);
