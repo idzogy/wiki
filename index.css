@@ -268,11 +268,11 @@ table{
   border-right: 4px solid var(--vapour);
 }
 
-.emph p{
+.jump p{
   margin: 0;
 }
 
-.info p{
+.example p{
   margin: 0;
 }
 
