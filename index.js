@@ -16,22 +16,22 @@ const md = window.markdownit({ html: true })
 .use(window.markdownitFootnote)
 .use(window.markdownitMultimdTable, { headerless: true, rowspan: true })
 .use(markdownitTh)
-.use(window.markdownitContainer, 'emph', {
+.use(window.markdownitContainer, 'jump', {
     render: function(tokens, idx){
         const token = tokens[idx];
         if(token.nesting === 1){
-            return '<div class="emph">\n';
+            return '<div class="jump">\n';
         }
         else{
             return '</div>\n';
         }
     }
 })
-.use(window.markdownitContainer, 'info', {
+.use(window.markdownitContainer, 'example', {
     render: function(tokens, idx){
         const token = tokens[idx];
         if(token.nesting === 1){
-            return '<div class="info">\n';
+            return '<div class="example">\n';
         }
         else{
             return '</div>\n';
@@ -81,7 +81,7 @@ function markdownitTh(md){
     for(let i = 0; i < tokens.length; i++){
         const token = tokens[i];
         if(token.type === 'inline' && tokens[i - 1]?.type === 'td_open'){
-            if(token.content.startsWith('# ')){
+            if(token.content.startsWith('#')){
                 tokens[i - 1].tag = 'th';
                 tokens[i + 1].tag = 'th';
                 token.content = token.content.slice(2);
