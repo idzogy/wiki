@@ -291,6 +291,10 @@ table{
   margin: 0;
 }
 
+.long p:last-child{
+  margin: 0;
+}
+
 @media(min-width: 1024px){
   #header{
     grid-template-columns: 75% 25%;
