@@ -48,6 +48,17 @@ const md = window.markdownit({ html: true })
             return '</div>\n';
         }
     }
+})
+.use(window.markdownitContainer, 'long', {
+    render: function(tokens, idx){
+        const token = tokens[idx];
+        if(token.nesting === 1){
+            return '<div class="long">\n';
+        }
+        else{
+            return '</div>\n';
+        }
+    }
 });
 
 let depth = 0;
