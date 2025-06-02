@@ -19,8 +19,9 @@
     {"type":"file","name":"인공어.md"},
     {"type":"file","name":"저민족.md"},
     {"type":"file","name":"저언어.md"},
-    {"type":"file","name":"저왕국.md"}
+    {"type":"file","name":"저왕국.md"},
+    {"type":"file","name":"코타바.md"}
   ]}
 ,
-  {"type":"report","directories":1,"files":20}
+  {"type":"report","directories":1,"files":21}
 ]
