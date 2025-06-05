@@ -95,7 +95,7 @@ function markdownitTh(md){
             if(token.content.startsWith('#')){
                 tokens[i - 1].tag = 'th';
                 tokens[i + 1].tag = 'th';
-                token.content = token.content.slice(2);
+                token.content = token.content.replace(/^#\s*/, '');
             }
         }
     }
