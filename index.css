@@ -268,7 +268,7 @@ table{
   border-right: 4px solid var(--vapour);
 }
 
-.long{
+.box{
   box-sizing: border-box;
   width: max-content;
   max-width: max(320px, 100%);
@@ -291,7 +291,7 @@ table{
   margin: 0;
 }
 
-.long p:last-child{
+.box p:last-child{
   margin: 0;
 }
 
