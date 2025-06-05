@@ -49,11 +49,11 @@ const md = window.markdownit({ html: true })
         }
     }
 })
-.use(window.markdownitContainer, 'long', {
+.use(window.markdownitContainer, 'box', {
     render: function(tokens, idx){
         const token = tokens[idx];
         if(token.nesting === 1){
-            return '<div class="long">\n';
+            return '<div class="box">\n';
         }
         else{
             return '</div>\n';
