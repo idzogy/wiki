@@ -41,7 +41,7 @@ body{
   margin: 0;
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Inter', 'Pretendard';
+  font-family: 'Noto Sans', 'Pretendard';
   font-synthesis: none !important;
   font-size: 16px;
   line-height: 1.5;
